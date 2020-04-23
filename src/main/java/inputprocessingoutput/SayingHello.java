@@ -12,17 +12,12 @@ public class SayingHello {
 
             System.out.println("What is your name? Ilona \nHello, Ilona, nice to meet you!");
 
-
-
             System.out.println("----------");
             Scanner scanner = new Scanner(System.in);
             System.out.print("What is your name? ");
             String name = scanner.nextLine();
             System.out.println("Hello, " + name + ", nice to meet you!");
             System.out.println("----------");
-
-
-
         }
     }
 

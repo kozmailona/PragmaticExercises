@@ -6,15 +6,16 @@ public class MadLib {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a noun: ");
         String input1 = scanner.nextLine();
+        System.out.println("Enter a verb: ");
         String input2 = scanner.nextLine();
+        System.out.println("Enter an adjective: ");
         String input3 = scanner.nextLine();
+        System.out.println("Enter an adverb: ");
         String input4 = scanner.nextLine();
-        String noun = "Enter a noun: ";
-        String verb = "Enter a verb: ";
-        String adjective = "Enter an adjective: ";
-        String adverb = "Enter an adverb: ";
-//        System.out.println(noun + input1 + verb + input2 + adjective + input3 + adverb + input4);
+
+        System.out.println("Do you " + input2 + " your " + input3 + " " + input1 + " "+ input4 + "? That's hilarious!");
 
     }
 }
