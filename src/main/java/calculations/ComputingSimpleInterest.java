@@ -16,7 +16,8 @@ public class ComputingSimpleInterest {
 
         double amountOfTheFinalInvestment = (principal * (1 + rateOfInterest * numberOfYears));
 
-        System.out.println("After " + numberOfYears + " years at " + rateOfInterest + " %, the investment will be " +
+        System.out.println("After " + numberOfYears + " years at " + rateOfInterest * 100 + " %, the investment " +
+                "will be " +
                 "worth $" + amountOfTheFinalInvestment);
 
         /*The formula for simple interest is
