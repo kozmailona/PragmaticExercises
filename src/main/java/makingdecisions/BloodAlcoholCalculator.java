@@ -9,24 +9,29 @@ public class BloodAlcoholCalculator {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Your weight in pounds: ");
         double weight = scanner.nextDouble();
-        System.out.print("Your gender (M/F): ");
-        String gender = scanner.nextLine();
-        scanner.nextLine();
-        System.out.print("Number of drinks: ");
-        int numberOfDrinks = scanner.nextInt();
         System.out.print("Amount of alcohol by volume of the drinks consumed (oz): ");
         double amountOfAlcoholByVolume = scanner.nextDouble();
         System.out.print("Amount of time since your last drink (hrs): ");
         int amountOfTime = scanner.nextInt();
-        double bacMen = (amountOfAlcoholByVolume * 5.14 / weight * 0.73) - .015 * amountOfTime;
-        double bacWomen = (amountOfAlcoholByVolume * 5.14 / weight * 0.66) - .015 * amountOfTime;
+        System.out.print("Your gender (M/F): ");
+        String gender = scanner.nextLine();
+        scanner.nextLine();
 
-        if (gender == "M") {
+        double bacMen = ((amountOfAlcoholByVolume * 5.14 / weight * 0.73) - 0.015 * amountOfTime);
+        double bacWomen = ((amountOfAlcoholByVolume * 5.14 / weight * 0.66) - 0.015 * amountOfTime);
+
+        if (gender.equals("M")) {
             System.out.println("Your bac is: " + bacMen);
+            if (bacMen >= 0.08) {
+                System.out.println("It is not legal for you to drive.");
+            }
         }
 
-        if (gender == "F") {
+        if (gender.equals("F")) {
             System.out.println("Your bac is: " + bacWomen);
+            if (bacWomen >= 0.08) {
+                System.out.println("It is not legal for you to drive.");
+            }
         }
 
     }
