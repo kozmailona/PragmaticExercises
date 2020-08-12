@@ -6,3 +6,4 @@ public class BMICalculator {
 
     }
 }
+//bmi = (weight / (height × height))* 703
